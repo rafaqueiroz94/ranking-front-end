@@ -1,0 +1,40 @@
+.main {
+    display: flex; 
+    width: 100%;
+}
+
+.column {
+    display: block; 
+    width: 70%;
+}
+
+.input-point {
+    display: block; 
+    width: 30%; 
+    margin-bottom: 5px;
+}
+
+.input-name {
+    display: block; 
+    width: 30%; 
+    margin-bottom: 20px;
+}
+
+.table {
+    display: block; 
+    width: 16%;
+}
+
+.flex-direction {
+    display: flex; 
+    flex-direction: row;
+}
+
+.block {
+    display: block;
+}
+
+.block-width {
+    display: block; 
+    width: 50%;
+}

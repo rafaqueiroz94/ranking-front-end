@@ -1,0 +1,62 @@
+<div class="main">
+  <div class="table">
+
+    <div class="flex-direction">
+      <div class="block">
+        <table border="1">
+          <tr>
+            <td>Ranking</td>
+          </tr>
+          <tr *ngFor="let ranking of arrayPositions">
+            <td>{{ranking.ranking}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block-width">
+        <table border="1">
+          <tr>
+            <td>Nome</td>
+            <td>Pontos</td>
+          </tr>
+          <tr *ngFor="let dados of data">
+            <td>{{dados.name}}</td>
+            <td>{{dados.points}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+
+    <div class="input-name">
+      <input type="text" [disabled]="round != 1" [(ngModel)]="name" placeholder="Inserir nome" />
+    </div>
+
+    <div class="input-point">
+      <input type="number" [disabled]="round != 1" [(ngModel)]="pointOne" placeholder="Pontuação da 1º Rodada" />
+    </div>
+
+    <div class="input-point">
+      <input type="number" [disabled]="round != 2" [(ngModel)]="pointTwo" placeholder="Pontuação da 2º Rodada" />
+    </div>
+
+    <div class="input-point">
+      <input type="number" [disabled]="round != 3" [(ngModel)]="pointThree" placeholder="Pontuação da 3º Rodada" />
+    </div>
+
+    <div class="input-point">
+      <input type="number" [disabled]="round != 4" [(ngModel)]="pointFour" placeholder="Pontuação da 4º Rodada" />
+    </div>
+
+    <div class="input-point">
+      <button (click)="addValue()" [disabled]="name == '' || pointOne == ''">Inserir pontuação</button>
+    </div>
+
+    <div>
+      <button (click)="restart()">Reiniciar</button>
+    </div>
+
+  </div>
+</div>
